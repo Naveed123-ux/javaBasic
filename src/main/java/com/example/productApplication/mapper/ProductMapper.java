@@ -16,8 +16,8 @@ public class ProductMapper {
 
     public static Product ToProductEntity(ProductDTO productDTO, Category category){
         Product product=new Product();
-        product.setName(product.getName());
-        product.setPrice(product.getPrice());
+        product.setName(productDTO.getName());
+        product.setPrice(productDTO.getPrice());
         product.setDescription(productDTO.getDescription());
         product.setCategory(category);
         return product;
