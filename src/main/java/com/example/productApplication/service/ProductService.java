@@ -17,7 +17,7 @@ public class ProductService {
     private CategoryRepositry categoryRepositry;
 
   public ProductDTO createProduct(ProductDTO productDTO){
-    System.out.println("categroty ID"+ productDTO);
+    System.out.println("categrory ID"+ productDTO);
       Category category=categoryRepositry.findById(productDTO.getCategoryId()).orElseThrow(()-> new RuntimeException("Category not found!"));
 
       Product product=ProductMapper.ToProductEntity(productDTO,category);
